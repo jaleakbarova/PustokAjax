@@ -1,0 +1,100 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int count = 1;
+}
+@model IEnumerable<Book>
+
+<div class="card-body">
+    <div class="d-flex justify-content-end mr-2 mb-3">
+        <a class="btn btn-success" asp-action="Create">Create Book</a>
+    </div>
+    <div class="table-responsive pt-3">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        #
+                    </th>
+
+                    <th>
+                        Name
+                    </th>
+                   
+                    <th>
+                        Author Name
+                    </th>
+
+                    <th>
+                        Genre
+                    </th>
+
+                    <th>
+                        Rate
+                    </th>
+
+                    <th>
+                        IsAviable
+                    </th>
+
+                    <th>
+                        Price
+                    </th>
+
+                    <th>
+                        DiscountPrice
+                    </th>
+                    
+                    <th>
+                        PageCount
+                    </th>
+
+                    <th>
+                        Description
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="table-info">
+                        <td>
+                            @(count++)
+                        </td>
+                        
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @item.Author.FullName
+                        </td>
+                        <td>
+                            @item.Genre.Name
+                        </td>
+                        <td>
+                            @item.Rate
+                        </td>
+                            <td>
+                            @item.IsAviable
+                            </td>
+                        <td>
+                            @item.Price
+                        </td>
+                            <td>
+                            @item.DiscountPrice
+                        </td>
+                        <td>
+                            @item.PageCount
+                        </td>
+                            <td>
+                            @item.Description
+                            </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

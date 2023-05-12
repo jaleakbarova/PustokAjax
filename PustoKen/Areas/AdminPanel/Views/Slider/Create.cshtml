@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Slider
+<div class="card-body">
+    <h4 class="card-title">Basic form elements</h4>
+    <p class="card-description">
+        Basic form elements
+    </p>
+    <form class="forms-sample" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <label asp-for="Title1" asp-action="Index"></label>
+            <input asp-for="Title1" class="form-control" placeholder="Title 1">
+            <span asp-validation-for="Title1"></span>
+
+        </div>
+       
+       
+        <div class="form-group">
+
+            <label asp-for="Title2" asp-action="Index"></label>
+            <input asp-for="Title2" class="form-control" placeholder="Title 2">
+            <span asp-validation-for="Title2"></span>
+
+        </div>
+
+        <div class="form-group">
+
+            <label asp-for="Description" asp-action="Index"></label>
+            <input asp-for="Description" class="form-control" placeholder="Title 1">
+            <span asp-validation-for="Description"></span>
+
+        </div>
+       
+        <div class="form-group">
+            <label asp-for="ImageFile" asp-action="Index"></label>
+            <input asp-for="ImageFile" class="form-control" placeholder="Image ">
+            <span asp-validation-for="ImageFile"></span>
+            
+        </div>     
+      
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <button class="btn btn-light">Cancel</button>
+    </form>
+</div>

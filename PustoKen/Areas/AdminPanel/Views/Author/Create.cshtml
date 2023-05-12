@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Author
+<div class="card-body">
+    <h4 class="card-title">Basic form elements</h4>
+    <p class="card-description">
+        Basic form elements
+    </p>
+    <form class="forms-sample" asp-action="Create" enctype="multipart/form-data">
+        <div class="form-group">
+
+            <label asp-for="FullName" asp-action="Index"></label>
+            <input asp-for="FullName" class="form-control" placeholder="Name">
+            <span asp-validation-for="FullName"></span>
+
+        </div>
+
+       
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <button class="btn btn-light">Cancel</button>
+    </form>
+</div>
